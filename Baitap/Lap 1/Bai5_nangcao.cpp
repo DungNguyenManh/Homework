@@ -2,7 +2,7 @@
 
 int main()
 {
-    int a;
+    int a ;
     do
     {
         printf("Nhap vao so nguyen a: ");
