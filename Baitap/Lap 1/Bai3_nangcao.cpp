@@ -2,7 +2,7 @@
 
 int main()
 {
-    int chieudai, chieurong;
+    int chieudai , chieurong;
     printf("Nhap chieu dai: ");
     scanf("%d", &chieudai);
     printf("Nhap chieu rong: ");
