@@ -2,7 +2,7 @@
 
 int main()
 {
-    int chieudai, chieurong;
+    int chieudai, chieurong ;
     printf("Nhap chieu rong: ");
     scanf("%d", &chieurong);
     chieudai = chieurong * 1.5;
