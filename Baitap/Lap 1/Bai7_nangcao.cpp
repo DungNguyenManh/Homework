@@ -2,7 +2,7 @@
 
 int main()
 {
-    float R; //Đường kính R
+    float R ; //Đường kính R
     float pi = 3.14;
     printf("Nhap duong kinh R: ");
     scanf("%f", &R);
