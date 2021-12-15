@@ -1,24 +1,24 @@
-#include <math.h>
 #include <stdio.h>
+
 int main()
 {
-    int ngay, thang, nam, songay;
-    printf("nhap ngay:");
-    scanf("%d", &ngay);
-    printf("nhap thang:");
-    scanf("%d", &thang);
-    printf("nhap nam:");
-    scanf("%d", &nam);
-    ngay = ngay - 1;
-    if (ngay <= 0)
+    int day, month, year, songay_trongthang;
+    printf("Nhap ngay: ");
+    scanf("%d", &day);
+    printf("Nhap thang: ");
+    scanf("%d", &month);
+    printf("Nhap year: ");
+    scanf("%d", &year);
+    day -= 1;
+    if (day <= 0)
     {
-        thang = thang - 1;
-        if (thang <= 0)
+        month -= 1;
+        if (month <= 0)
         {
-            thang = 12;
-            nam -= 1;
+            month = 12;
+            year -= 1;
         }
-        switch (thang)
+        switch (month)
         {
         case 1:
         case 3:
@@ -27,16 +27,25 @@ int main()
         case 8:
         case 10:
         case 12:
-            songay = 31;
+            day = 31;
             break;
         case 2:
-            songay = 28 + ((nam % 4 == 0 && nam % 100 != 0) || (nam % 400 == 0));
-            break;
+            if ((year % 4 == 0 && year % 100 != 0) || year & 400 == 0)
+            {
+                day = 29;
+                break;
+            }
+            else
+            {
+                day = 28;
+                break;
+            }
         default:
-            songay = 30;
+            day = 30;
         }
-        ngay = songay;
+        songay_trongthang = day;
     }
-    printf("%d/%d/%d", ngay, thang, nam);
+    printf("Truoc 1 ngay vua nhap la: %d/%d/%d", day, month, year);
+
     return 0;
 }
