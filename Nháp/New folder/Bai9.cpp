@@ -2,14 +2,14 @@
 
 int main()
 {
-	int n, sum = 0;
+	int n, T = 1;
 	printf("Nhap n: ");
 	scanf("%d", &n);
-	for (int i = 0; i <= n; i++)
+	for (int i = 1; i <= n; i++)
 	{
-		sum += (2 * i + 1);
+		T *= i;
 	}
-	printf("%d", sum);
+	printf("%d", T);
 	
 	return 0;
 }
