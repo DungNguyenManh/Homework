@@ -2,7 +2,7 @@
 
 int main()
 {
-    int n, sum = 0;
+    int n, T = 1;
     printf("Nhap vao n: ");
     scanf("%d", &n);
     printf("Cac uoc so cua %d la: ", n);
@@ -10,11 +10,11 @@ int main()
     {
         if (n % i == 0)
         {
-            sum += i;
+            T *= i;
             printf("%d ", i);
         }
     }
-    printf("\nTong cac uoc so cua %d la: %d", n, sum);
+    printf("\nTich cac uoc so cua %d la: %d", n, T);
 
     return 0;
 }
