@@ -2,19 +2,19 @@
 
 int main()
 {
-    int n, sum = 0;
+    int n, T = 1;
     printf("Nhap vao n: ");
     scanf("%d", &n);
-    printf("Cac uoc so chan cua %d la: ", n);
+    printf("Cac uoc so le cua %d la: ", n);
     for (int i = 1; i < n; i++)
     {
-        if (n % i == 0 && i % 2 == 0)
+        if (n % i == 0 && i % 2 == 1)
         {
-            sum += i;
+            T *= i;
             printf("%d ", i);
         }
     }
-    printf("Tong cac uoc so chan cua %d la: %d", n, sum);
+    printf("Tich cac uoc so le cua %d la: %d", n, T);
 
     return 0;
 }

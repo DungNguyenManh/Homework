@@ -2,7 +2,7 @@
 
 int main()
 {
-    int n, count = 0;
+    int n, T = 1;
     printf("Nhap vao n: ");
     scanf("%d", &n);
     printf("Cac uoc so le cua %d la: ", n);
@@ -10,9 +10,11 @@ int main()
     {
         if (n % i == 0 && i % 2 == 1)
         {
+            T *= i;
             printf("%d ", i);
         }
     }
+    printf("\nTich cac uoc so le cua %d la: %d", n, T);
 
     return 0;
 }
