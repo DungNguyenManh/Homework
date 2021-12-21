@@ -21,13 +21,15 @@ bool Kiem_Tra_So_Chinh_Phuong(int n)
     return false;
 }
 
-void Liet_Ke_So_Chinh_Phuong(int n)
+void Liet_Ke_So_Chinh_Phuong(int n) 
 {
+    printf("Tong cac so chinh phuong nho hon %d la: ",n);
+    int sum = 0;
     for (int i = 4; i < n; i++)
     {
-        if (Kiem_Tra_So_Chinh_Phuong(i) == true)
-        {
-            printf("%2d ", i);
+        if(Kiem_Tra_So_Chinh_Phuong(i) == true){
+            sum += i;
         }
-    }
+    }printf("%d",sum);
+        
 }
