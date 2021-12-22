@@ -9,7 +9,6 @@ void Xuat_Mang(int a[], int c);
 void Dem_So_Nguyen_To(int a[], int c);
 void Tong_So_Chinh_Phuong_Vitri_Le(int a[], int c);
 void Dao_Nguoc_Mang(int a[], int c);
-void Xuat_KQ(int a[], int c);
 
 int main()
 {
@@ -54,7 +53,6 @@ int main()
         Dem_So_Nguyen_To(a, c);
         Tong_So_Chinh_Phuong_Vitri_Le(a, c);
         Dao_Nguoc_Mang(a, c);
-        Xuat_KQ(a, c);
     }
 
     return 0;
@@ -157,37 +155,22 @@ void Tong_So_Chinh_Phuong_Vitri_Le(int a[], int c)
 void Dao_Nguoc_Mang(int a[], int c)
 {
     printf("\nDao nguoc mang: ");
-    for (int i = c - 1; i >= 0; i--)
+    for (int i = c - 1; i >= a[0]; i--)
     {
         printf("%2d ", a[i]);
     }
 }
 
-bool Kiem_Tra_Mang_Tang_Dan(int a[], int c)
+/*void Dao_Nguoc_Mang(int a[], int c)
 {
+    int temp;
     for (int i = 0; i < c; i++)
     {
-        if (a[i + 1] <= a[i])
+        if (a[i] + 1 > a[i])
         {
-            return false;
+            a[i] + 1 = temp;
+            a[i] + 1 =
         }
-        return true;
+        printf("%2d ", a[i]);
     }
-}
-
-void Xuat_KQ(int a[], int c)
-{
-    for (int i = 0; i < c; i++)
-    {
-        if (Kiem_Tra_Mang_Tang_Dan(a, c) == false)
-        {
-            printf("\nMang khong tang dan");
-            break;
-        }
-        else
-        {
-            printf("\nMang tang dan");
-            break;
-        }
-    }
-}
+}*/
