@@ -4,10 +4,10 @@
 
 void Nhap_Mang(int a[], int n);
 void Xuat_Mang(int a[], int n);
-//void Dem_So_Nguyen_To(int a[], int n);
- void Tong_So_Chinh_Phuong_Vitri_Le(int a[], int n);
-//void Dao_Nguoc_Cac_Phan_Tu_Trong_Mang(int a[], int n);
-//void Xuat_Kq(int a[], int n);
+void Dem_So_Nguyen_To(int a[], int n);
+// void Tong_So_Chinh_Phuong_Vitri_Le(int a[], int n);
+void Dao_Nguoc_Cac_Phan_Tu_Trong_Mang(int a[], int n);
+void Xuat_Kq(int a[], int n);
 
 int main()
 {
@@ -16,10 +16,10 @@ int main()
     scanf("%d", &n);
     Nhap_Mang(a, n);
     Xuat_Mang(a, n);
-    //Dem_So_Nguyen_To(a, n);
-     Tong_So_Chinh_Phuong_Vitri_Le(a, n);
-    //Dao_Nguoc_Cac_Phan_Tu_Trong_Mang(a, n);
-    //Xuat_Kq(a, n);
+    Dem_So_Nguyen_To(a, n);
+    // Tong_So_Chinh_Phuong_Vitri_Le(a, n);
+    Dao_Nguoc_Cac_Phan_Tu_Trong_Mang(a, n);
+    Xuat_Kq(a, n);
 
     return 0;
 }
@@ -42,7 +42,7 @@ void Xuat_Mang(int a[], int n) // Xuất mảng
     }
 }
 
-/*bool Kiem_Tra_So_Nguyen_To(int n) // Kiểm tra số nguyên tố
+bool Kiem_Tra_So_Nguyen_To(int n) // Kiểm tra số nguyên tố
 {
     if (n < 2)
     {
@@ -69,9 +69,9 @@ void Dem_So_Nguyen_To(int a[], int n) //Đếm số nguyên tố
         }
     }
     printf("\nCo %d so nguyen to trong mang", count);
-}*/
+}
 
-bool Kiem_Tra_So_Chinh_Phuong(int n) // Kiểm tra số chính phương
+/*bool Kiem_Tra_So_Chinh_Phuong(int n) // Kiểm tra số chính phương
 {
     if (sqrt(n) * sqrt(n) == n)
     {
@@ -97,9 +97,9 @@ void Tong_So_Chinh_Phuong_Vitri_Le(int a[], int n) // Tổng số chính phươn
         }
     }
     printf("Tong so chinh phuong o vi tri le la: %d", sum);
-}
+}*/
 
-/*void Dao_Nguoc_Cac_Phan_Tu_Trong_Mang(int a[], int n)
+void Dao_Nguoc_Cac_Phan_Tu_Trong_Mang(int a[], int n)
 {
     for (int i = 0; i <= n / 2; i++)
     {
@@ -137,4 +137,4 @@ void Xuat_Kq(int a[], int n)
     {
         printf("\nMang a tang dan");
     }
-}*/
+}
