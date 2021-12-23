@@ -10,7 +10,7 @@ int main()
     printf("Nhap giay: ");
     scanf("%d", &s);
     s++;
-    if (s = 60)
+    if (s >= 60)
     {
         s = 0;
         p++;

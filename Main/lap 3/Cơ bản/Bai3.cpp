@@ -2,43 +2,28 @@
 
 int main()
 {
-    int d, m;
-    printf("Nhap thang: ");
-    scanf("%d", &m);
-    if (m >= 1 && m <= 12)
+    int m;
+    do
     {
-        switch (m)
+        printf("Nhap thang: ");
+        scanf("%d", &m);
+        if (m < 1 || m > 12)
         {
-        case 4:
-        case 6:
-        case 9:
-        case 11:
-            d = 30;
-            break;
-        case 1:
-        case 3:
-        case 5:
-        case 7:
-        case 8:
-        case 10:
-        case 12:
-            d = 31;
-            break;
-        default:
-            d = 28;
+            printf("Nhap lai \n");
         }
-        if (d == 28)
-        {
-            printf("Ko tinh nam nhuan thang 2 co 28 hoac 29 ngay");
-        }
-        else
-        {
-            printf("Ko tinh nam nhuan, %d co %d", m, d);
-        }
-    }
-    else
+    } while (m < 1 || m > 12);
+    switch (m)
     {
-        printf("Thang ko hop le");
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        printf("Thang %d co 30 ngay", m);
+        break;
+    case 2:
+        printf("Khong tinh nam nhuan thi thang 2 co 28 hoac 29 ngay");
+    default:
+        printf("Thang %d co 31 ngay", m);
     }
 
     return 0;

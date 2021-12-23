@@ -11,7 +11,6 @@ int main()
     fflush(stdin);
     printf("Nhap cau tra loi: ");
     char a;
-
     scanf("%c", &a);
     switch (a)
     {
