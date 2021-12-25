@@ -12,11 +12,11 @@ int main()
         temp = temp * 10 + (n % 10);
         if (temp % 2 == 0)
         {
-            sochan += 1;
+            sochan++;
         }
         if (temp % 2 != 0)
         {
-            sole += 1;
+            sole++;
         }
         n /= 10;
     }

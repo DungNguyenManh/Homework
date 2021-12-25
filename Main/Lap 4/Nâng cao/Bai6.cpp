@@ -17,6 +17,7 @@ int main()
             sumsole += temp;
             Tsole *= temp;
         }
+        n /= 10;
     }
     printf("Tong so chan = %d",sumsochan);
     printf("\nTich so chan = %d",Tsochan);
