@@ -73,5 +73,5 @@ void Tinh_Tong_n_So_Chinh_Phuong_Dau_Tien(int k)
     {
         sum += (i * i);
     }
-    printf("\nTong %d so chinh phuong dau tien la: %2d ",k, sum);
+    printf("\n%2d ", sum);
 }
