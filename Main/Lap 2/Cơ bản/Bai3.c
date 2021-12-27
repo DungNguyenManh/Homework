@@ -8,14 +8,14 @@ int main()
     printf("Nhap so b: ");
     scanf("%d", &b);
     max = a;
-    if (max > b)
+    if (max < b)
     {
         max = b;
-        printf("So lon nhat la: %d", a);
+        printf("So lon nhat la: %d", max);
     }
     else
     {
-        printf("So lon nhat la: %d", b);
+        printf("So lon nhat la: %d", max);
     }
 
     return 0;

@@ -166,7 +166,7 @@ void Phan_Tu_Lon_Nhat_Trong_Mang(int a[], int n)  // Tìm phần tử lớn nh�
     int max = 1;
     for(int i = n; i > 0; i--){
         if(a[i] % 2 != 0 && max < a[i]){
-            max = i;
+            max = a[i];
         }
     }printf("\nPhan tu lon nhat trong mang la: %d",max);
 }
