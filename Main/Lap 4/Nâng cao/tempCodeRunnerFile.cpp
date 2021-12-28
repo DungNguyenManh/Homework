@@ -22,11 +22,8 @@ int Nhap_So_n(int n)
 void Tim_So_Nho_Nhat(int n)
 {
     int temp = n;
+    int min = 0;
     int i;
-    int min = n;
-    if(n == 0){
-        min = 0;
-    }
     while (n > 0)
     {
         i = n % 10;
