@@ -21,8 +21,8 @@ int Nhap_So_n(int n)
 
 void Dem_So_Luong_Chu_So_Max(int n)
 {
-    int max = 0;
-    int count = 0;
+    int max = 1;
+    int count = 1;
     int i;
     int temp = n;
     if (n == 0)
@@ -43,5 +43,6 @@ void Dem_So_Luong_Chu_So_Max(int n)
 
         n /= 10;
     }
-    printf("So luong chu so lon nhat trong %d la: %d", temp, count);
+    printf("Chu so lon nhat trong %d la: %d\n", temp, max);
+    printf("So luong chu so %d trong %d la: %d", max, temp, count);
 }

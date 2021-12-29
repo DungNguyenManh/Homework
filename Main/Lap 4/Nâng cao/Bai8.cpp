@@ -23,8 +23,9 @@ void Tim_So_Nho_Nhat(int n)
 {
     int temp = n;
     int i;
-    int min = n;
-    if(n == 0){
+    int min = n % 10;
+    if (n == 0)
+    {
         min = 0;
     }
     while (n > 0)

@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 int Nhap_So(int n);
-void Tich(int n);
+void Sum(int n);
 
 int main()
 {
     int n;
     n = Nhap_So(n);
-    Tich(n);
+    Sum(n);
 
     return 0;
 }
@@ -19,12 +19,13 @@ int Nhap_So(int n)
     return n;
 }
 
-void Tich(int n)
+void Sum(int n)
 {
-    int T = 1;
+    int sum = 0, tich1 = 1;
     for (int i = 1; i <= n; i++)
     {
-        T *= i;
+        tich1 *= i;
+        sum += tich1;
     }
-    printf("Tich cac so tu 1 den %d la: %d", n, T);
+    printf("Tong cac so tu 1 den %d la: %d", n, sum);
 }
