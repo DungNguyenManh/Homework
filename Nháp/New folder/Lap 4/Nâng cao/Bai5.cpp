@@ -1,36 +1,21 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int Nhap_so(char c);
-
-int main()
-{
-    int n, sochan = 0, sole = 0, temp;
-    n = Nhap_so('n');
-    temp = 0;
-    while (n > 0)
-    {
-        temp = temp * 10 + (n % 10);
-        if (temp % 2 == 0)
-        {
+int main(){
+    int n, sochan = 0, sole = 0, variable = 0;
+    printf("Nhap n: ");
+    scanf("%d",&n);
+    int temp = n;
+    while(temp > 0){
+        variable = variable * 10 + (temp % 10);
+        if(variable % 2 == 0){
             sochan++;
-        }
-        if (temp % 2 != 0)
-        {
+        }else{
             sole++;
         }
-        n /= 10;
+        temp /= 10;
     }
-
-    printf("so chan: %d", sochan);
-    printf("\nso le: %d", sole);
+    printf("So luong chu so chan trong %d la: %d",n,sochan);
+    printf("\nSo luong chu so le trong %d la: %d",n,sole);
 
     return 0;
-}
-
-int Nhap_so(char c)
-{
-    int k;
-    printf("Nhap so nguyen duong %c: ", c);
-    scanf("%d", &k);
-    return k;
 }
