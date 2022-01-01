@@ -1,16 +1,16 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int Nhap_So(char c);
 void Max(int a, int b, int c);
 
-int main(){
+int main()
+{
     int a, b, c;
     a = Nhap_So('a');
     b = Nhap_So('b');
     c = Nhap_So('c');
-    Max(a,b,c);
-
+    Max(a, b, c);
 
     return 0;
 }
@@ -27,12 +27,18 @@ int Nhap_So(char c)
 void Max(int a, int b, int c)
 {
     int max;
-    if(a >= b && a >= c){
+    if (a >= b && a >= c)
+    {
         max = a;
-    }else{
-        if(b >= c){
+    }
+    else
+    {
+        if (b >= c)
+        {
             max = b;
-        }else{
+        }
+        else
+        {
             max = c;
         }
     }
