@@ -1,41 +1,28 @@
 #include <stdio.h>
 
-int Nhap_So_n(int n);
-void Tim_So_Nho_Nhat(int n);
-
 int main()
 {
-    int n;
-    n = Nhap_So_n(n);
-    Tim_So_Nho_Nhat(n);
-
-    return 0;
-}
-
-int Nhap_So_n(int n)
-{
+    int n, min, temp;
     printf("Nhap so nguyen duong n: ");
     scanf("%d", &n);
-    return n;
-}
-
-void Tim_So_Nho_Nhat(int n)
-{
-    int temp = n;
-    int i;
-    int min = n % 10;
-    if (n == 0)
+    min = n % 10;
+    temp = n;
+    if (temp >= 0)
     {
-        min = 0;
-    }
-    while (n > 0)
-    {
-        i = n % 10;
-        if (i < min)
+        while (temp > 0)
         {
-            min = i;
+            if (temp % 10 < min)
+            {
+                min = temp % 10;
+            }
+            temp /= 10;
         }
-        n /= 10;
+        printf("Chu so nho nhat trong %d la: %d", n, min);
     }
-    printf("Chu so nho nhat trong %d la: %d", temp, min);
+    else
+    {
+        printf("%d Khong phai la so nguyen duong", n);
+    }
+
+    return 0;
 }

@@ -3,15 +3,9 @@
 int main()
 {
     int n, sum = 0, max = 0;
-    do
-    {
-        printf("Nhap n: ");
-        scanf("%d", &n);
-        if (n < 0)
-        {
-            printf("Nhap lai\n");
-        }
-    } while (n < 0);
+    printf("Nhap n: ");
+    scanf("%d", &n);
+    printf("Nhap lai\n");
     for (int i = 1; i <= n; i++)
     {
         sum += i;
@@ -31,6 +25,3 @@ int main()
 
     return 0;
 }
-
-
-
