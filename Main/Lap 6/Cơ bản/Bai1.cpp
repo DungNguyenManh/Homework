@@ -21,7 +21,7 @@ int Nhap_So(int n)
 void Uoc_So(int n)
 {
     printf("Cac uoc so cua %d la: ", n);
-    for (int i = 1; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
         if (n % i == 0)
         {
