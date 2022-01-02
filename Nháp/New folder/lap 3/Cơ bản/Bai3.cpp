@@ -1,30 +1,46 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int Nhap_Thang();
+void Day_Of_Month(int month);
 
 int main()
 {
-    int m;
+    int month = Nhap_Thang();
+    Day_Of_Month(month);
+
+    return 0;
+}
+
+int Nhap_Thang()
+{
+    int n;
     do
     {
-        printf("Nhap thang: ");
-        scanf("%d", &m);
-        if (m < 1 || m > 12)
+        cout << "Nhap thang: ";
+        cin >> n;
+        if (!(1 <= n && n <= 12))
         {
-            printf("Nhap lai \n");
+            cout << "Thang khong le. Nhap lai!\n";
         }
-    } while (m < 1 || m > 12);
-    switch (m)
+    } while (!(1 <= n && n <= 12));
+    return n;
+}
+
+void Day_Of_Month(int month)
+{
+    switch (month)
     {
     case 4:
     case 6:
     case 9:
     case 11:
-        printf("Thang %d co 30 ngay", m);
+        cout << "Thang " << month << " co 30 ngay";
         break;
     case 2:
-        printf("Khong tinh nam nhuan thi thang 2 co 28 hoac 29 ngay");
+        cout << "Thang " << month << " khong xet nam nhuan thi co 28 or 29 ngay";
+        break;
     default:
-        printf("Thang %d co 31 ngay", m);
+        cout << "Thang " << month << " co 31 ngay";
     }
-
-    return 0;
 }

@@ -1,51 +1,42 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main()
 {
-    int gio, phut, giay;
-    printf("Nhap gio: ");
-    scanf("%d", &gio);
-    printf("Nhap phut: ");
-    scanf("%d", &phut);
-    printf("Nhap giay: ");
-    scanf("%d", &giay);
-    giay -= 1;
-    if (gio >= 0 && gio <= 23)
+    int h, m, s;
+    cout << "Nhap gio: ";
+    cin >> h;
+    cout << "Nhap phut: ";
+    cin >> m;
+    cout << "Nhap giay: ";
+    cin >> s;
+    s--;
+    if (s <= 0)
     {
-        if (phut >= 0 && phut <= 59)
+        s = 59;
+        m--;
+        if (m <= 0)
         {
-            if (giay <= 59)
+            m = 59;
+            h--;
+            if (h <= 0)
             {
-                printf("Ban vua nhap %d:%d:%d", gio, phut, giay);
-                if (giay < 0)
-                {
-                    giay = 59;
-                    phut--;
-                    if(phut < 0)
-                    {
-                        phut = 59;
-                        gio--;
-                        if(gio < 0){
-                            gio = 23;
-                        }
-                    }
-                }
-                
-                printf("\n1 giay truoc la %d:%d:%d", gio, phut, giay);
+                h = 23;
+                cout << h << ":" << m << ":" << s;
             }
             else
             {
-                printf("giay ko dung");
+                cout << h << ":" << m << ":" << s;
             }
         }
         else
         {
-            printf("phut ko dung");
+            cout << h << ":" << m << ":" << s;
         }
     }
     else
     {
-        printf("gio ko dung");
+        cout << h << ":" << m << ":" << s;
     }
 
     return 0;

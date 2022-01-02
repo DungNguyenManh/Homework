@@ -1,26 +1,38 @@
-#include <stdio.h>
-#include <math.h>
+#include <iostream>
+using namespace std;
+#include <cmath>
+
+int Nhap_So();
+void Max_Number(int n);
 
 int main()
 {
-    int n, a, b, c;
-    printf("Nhap vao n: ");
-    scanf("%d", &n);
-    a = n / 100;
-    b = n % 100 / 10;
-    c = n % 10;
-    if (a > b && a > c)
-    {
-        printf("So lon nhat la: %d", a);
-    }
-    else if (b > a && b > c)
-    {
-        printf("So lon nhat la: %d", b);
-    }
-    else
-    {
-        printf("So lon nhat la: %d", c);
-    }
+    int n;
+    n = Nhap_So();
+    Max_Number(n);
 
     return 0;
+}
+
+int Nhap_So()
+{
+    int n;
+    cout << "Nhap so nguyen duong n: ";
+    cin >> n;
+    return n;
+}
+
+void Max_Number(int n)
+{
+    int temp = n;
+    int max = 0;
+    while (temp > 0)
+    {
+        if (temp % 10 > max)
+        {
+            max = temp % 10;
+        }
+        temp /= 10;
+    }
+    cout << "Chu so lon nhat trong " << n << " la: " << max;
 }

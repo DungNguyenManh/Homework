@@ -1,28 +1,43 @@
-#include <stdio.h>
-#include <math.h>
+#include <iostream>
+using namespace std;
+#include <cmath>
+
+int Nhap_So(char c);
+void Giai_Pt_Bac1(int a, int b);
 
 int main()
 {
-    float a, b;
-    printf("Nhap vao a: ");
-    scanf("%f", &a);
-    printf("Nhap vao b: ");
-    scanf("%f", &b);
+    int a, b;
+    a = Nhap_So('a');
+    b = Nhap_So('b');
+    Giai_Pt_Bac1(a, b);
+
+    return 0;
+}
+
+int Nhap_So(char c)
+{
+    int n;
+    cout << "Nhap " << c << ": ";
+    cin >> n;
+    return n;
+}
+
+void Giai_Pt_Bac1(int a, int b)
+{
     if (a == 0)
     {
         if (b == 0)
         {
-            printf("Pt vo so nghiem");
+            cout << "Phuong trinh vo so nghiem";
         }
         else
         {
-            printf("Pt vo nghiem");
+            cout << "Phuong trinh vo nghiem";
         }
     }
     else
     {
-        printf("x = %.2f", -b / a);
+        cout << "Phuong trinh co 1 nghiem: " << (float)-b / a;
     }
-
-    return 0;
 }
