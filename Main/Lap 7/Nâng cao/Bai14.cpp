@@ -1,10 +1,8 @@
 #include <stdio.h>
 #define Max 100
-bool Check_ElementNumber(int n);
 void check();
 int main()
 {
-    int k;
     check();
     return 0;
 }
@@ -25,22 +23,21 @@ bool Check_ElementNumber(int n)
     return 1;
 }
 
-void check(){
-    int k;
+void check()
+{
+    int z;
     for (int i = 4; i <= Max; i++)
     {
         for (int j = i - 1; j > 0; j--)
         {
             if (Check_ElementNumber(j))
             {
-                k = i - j;
-                if (Check_ElementNumber(k))
+                z = i - j;
+                if (Check_ElementNumber(z))
                 {
-                    printf("%2d = %2d + %2d\n", i, j, k);
+                    printf("%2d = %2d + %2d\n", i, j, z);
                 }
             }
         }
     }
-
-
 }

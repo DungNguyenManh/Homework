@@ -24,7 +24,7 @@ bool Check_Down(int n)
     int chusocuoicung = n % 10;
     int temp = n / 10;
     int sokecuoi;
-    while (temp != 0)
+    while (temp > 0)
     {
         sokecuoi = temp % 10;
         if (sokecuoi < chusocuoicung)

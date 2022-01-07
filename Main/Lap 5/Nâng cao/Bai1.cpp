@@ -45,3 +45,4 @@ void Odd_Number(int n)
         printf("%d khong toan le", n);
     }
 }
+

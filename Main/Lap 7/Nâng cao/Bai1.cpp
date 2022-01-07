@@ -34,7 +34,7 @@ int nhapso(char x)
 
 void kiemtrasole(int n, int m)
 {
-    printf("cac so le nam trong {n;m} la: ");
+    printf("cac so le nam trong {%d;%d} la: ",n,m);
     for (int i = n; i <= m; i++)
     {
         if (i % 2 != 0)

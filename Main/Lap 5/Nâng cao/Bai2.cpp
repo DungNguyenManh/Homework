@@ -29,16 +29,13 @@ int Nhap_So(int n)
 void Position_Max(int n)
 {
     int a, b, c;
-    a = n / 100;
-    b = n / 10 % 10;
-    c = n % 10;
-    if (a >= b && a >= c)
+    if (n / 100 >= n/10%10 && n/100 >= n%10)
     {
         printf("Position Max: hang tram");
     }
     else
     {
-        if (b >= c)
+        if (n/10%10 >= n%10)
         {
             printf("Position Max: hang chuc");
         }
