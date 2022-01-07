@@ -30,7 +30,7 @@ bool Check_Element_Number(int n)
             return 0;
         }
     }
-    return 1;
+    return 1; 
 }
 
 void Kq(int n)
