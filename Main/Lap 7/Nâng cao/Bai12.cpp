@@ -1,8 +1,9 @@
 #include <stdio.h>
-#include <math.h>
+
 int nhapso(char x);
 bool kiemtrasnt(int k);
 void tachso(int n);
+
 int main()
 {
     int n;
@@ -15,7 +16,7 @@ int main()
             printf("nhap lai n sao cho 0<n<99999");
         }
 
-    } while (!(0 < n && n < 99999));
+    } while (!(0 < n && n <= 99999));
     tachso(n);
     return 0;
 }
@@ -23,7 +24,7 @@ int main()
 int nhapso(char x)
 {
     int k;
-    printf("\nnhap %c:", x);
+    printf("\nnhap %c: ", x);
     scanf("%d", &k);
     return k;
 }
@@ -31,30 +32,28 @@ int nhapso(char x)
 bool kiemtrasnt(int k)
 {
     if (k < 2)
-        return false;
-    if (k >= 2)
-        for (int i = 2; i < (k - 1); i++)
+        return 0;
+    for (int i = 2; i < k; i++)
+    {
+        if (k % i == 0)
         {
-            if (k % i == 0)
-            {
-                return false;
-            }
-            return true;
+            return 0;
         }
+    }
+    return 1;
 }
 
 void tachso(int n)
 {
-    printf("so %d co cac chu so la so nguyen to: ", n);
-    while (n > 0)
+    int temp = n;
+    int count = 0;
+    while (temp > 0)
     {
-        int i;
-        i = n % 10;
-        if (kiemtrasnt(i))
+        if (kiemtrasnt(temp % 10))
         {
-            printf("\t%d", i);
+            count++;
         }
-        n = n / 10;
+        temp /= 10;
     }
+    printf("%d co %d chu so nguyen to",n,count);
 }
-
