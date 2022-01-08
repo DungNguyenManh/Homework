@@ -41,7 +41,7 @@ void Chuong_Trinh()
             if (!(0 <= chon_cau && chon_cau <= 5))
             {
                 printf("Khong hop le. Moi nhap lai!\n");
-            }  
+            }   
         } while (!(0 <= chon_cau && chon_cau <= 5));
         switch (chon_cau)
         {
