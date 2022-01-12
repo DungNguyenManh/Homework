@@ -5,8 +5,8 @@
 void Nhap_Kich_Thuoc_Mang(int &n);
 void Nhap_Mang(int a[], int n);
 void Xuat_Mang(int a[], int n);
-void Tang_Dan(int a[], int n);
-void Xuat_Mang_Tang_Dan(int a[], int n);
+void Giam_Dan(int a[], int n);
+void Xuat_Mang_Giam_Dan(int a[], int n);
 
 int main()
 {
@@ -14,8 +14,8 @@ int main()
     Nhap_Kich_Thuoc_Mang(n);
     Nhap_Mang(a, n);
     Xuat_Mang(a, n);
-    Tang_Dan(a, n);
-    Xuat_Mang_Tang_Dan(a, n);
+    Giam_Dan(a, n);
+    Xuat_Mang_Giam_Dan(a, n);
 
     return 0;
 }
@@ -51,13 +51,13 @@ void Swaps(int &a, int &b)
     a -= b;
 }
 
-void Tang_Dan(int a[], int n)
+void Giam_Dan(int a[], int n)
 {
     for (int i = 0; i < n; i++)
     {
         for (int j = i + 1; j < n; j++)
         {
-            if (a[i] > a[j])
+            if (a[i] < a[j])
             {
                 Swaps(a[i], a[j]);
             }
@@ -65,9 +65,9 @@ void Tang_Dan(int a[], int n)
     }
 }
 
-void Xuat_Mang_Tang_Dan(int a[], int n)
+void Xuat_Mang_Giam_Dan(int a[], int n)
 {
-    printf("\nMang tang dan la: ");
+    printf("\nMang giam dan la: ");
     for (int i = 0; i < n; i++)
     {
         printf("%2d ", a[i]);
