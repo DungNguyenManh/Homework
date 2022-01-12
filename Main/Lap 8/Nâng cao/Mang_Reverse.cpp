@@ -50,3 +50,10 @@ void In_Mang_Dao_Nguoc(int a[], int n)
         printf("%2d ",a[i]);
     }
 }
+
+void Dao_Nguoc_Mang(int a[], int n)
+{
+    for(int i = 0; i < n/2; i++){
+        
+    }
+}
