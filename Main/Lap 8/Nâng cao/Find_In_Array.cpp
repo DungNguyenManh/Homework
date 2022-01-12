@@ -44,4 +44,4 @@ void Xuat_Mang(int a[], int n)
     {
         printf("%2d ", a[i]);
     }
-}
+} 
