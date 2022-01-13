@@ -5,17 +5,17 @@
 void Nhap_Kich_Thuoc_Mang(int &n);
 void Nhap_Mang(int a[], int n);
 void Xuat_Mang(int a[], int n);
-bool Timkiem(int a[], int n, int flag);
-void KQ(int a[], int n);
+void Them_Phantu(int a[], int &n);
+void Xuat_Mang_Da_Them(int a[], int &n);
 
 int main()
 {
-    int a[Max], n, flag;
+    int a[Max], n, vitri;
     Nhap_Kich_Thuoc_Mang(n);
     Nhap_Mang(a, n);
     Xuat_Mang(a, n);
-    Timkiem(a, n, flag);
-    KQ(a, n);
+    Them_Phantu(a, n);
+    Xuat_Mang_Da_Them(a, n);
 
     return 0;
 }
@@ -44,29 +44,24 @@ void Xuat_Mang(int a[], int n)
     }
 }
 
-bool Timkiem(int a[], int n, int flag)
+void Them_Phantu(int a[], int &n)
 {
-    for (int i = 0; i < n; i++)
+    int m;
+    printf("\nNhap so muon them o dau mang: ");
+    scanf("%d", &m);
+    for (int i = n; i > 0; i--)
     {
-        if (a[i] == flag)
-        {
-            return 1;
-        }
+        a[i] = a[i - 1];
     }
-    return 0;
+    a[0] = m;
+    n++;
 }
 
-void KQ(int a[], int n)
+void Xuat_Mang_Da_Them(int a[], int &n)
 {
-    int find;
-    printf("\nNhap so muon tim kiem: ");
-    scanf("%d", &find);
-    if (Timkiem(a, n, find))
+    printf("Mang da them la: ");
+    for (int i = 0; i < n; i++)
     {
-        printf("Co");
-    }
-    else
-    {
-        printf("Khong");
+        printf("%2d ", a[i]);
     }
 }

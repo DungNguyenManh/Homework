@@ -1,32 +1,24 @@
 #include <stdio.h>
 
-int Nhap_So(int n);
-void Phan_Tich_Thua_So(int n);
+void Nhap_So(int &n);
+void Phan_Tich(int n);
 
 int main()
 {
-    int n = Nhap_So(n);
-    Phan_Tich_Thua_So(n);
+    int n;
+    Nhap_So(n);
+    Phan_Tich(n);
 
     return 0;
 }
 
-int Nhap_So(int n)
+void Nhap_So(int &n)
 {
-    printf("Nhap so: ");
+    printf("Nhap so nguyen duong n: ");
     scanf("%d", &n);
-    if (n >= 2)
-    {
-        return n;
-    }
-    else
-    {
-        printf("Nhap n > 2\n");
-        Nhap_So(n);
-    }
 }
 
-void Phan_Tich_Thua_So(int n)
+void Phan_Tich(int n)
 {
     int i = 2;
     printf("%d = ", n);
