@@ -10,7 +10,7 @@ void Tao_Mang_Ngau_Nhien(int a[], int n);
 void Xuat_Mang_Ngau_Nhien(int a[], int n);
 
 int main(){
-    srand((int) time(0)); 
+    srand((int) time(NULL)); 
     int a[Max], n;
     Nhap_Kich_Thuoc_Mang(n);
     Tao_Mang_Ngau_Nhien(a,n);

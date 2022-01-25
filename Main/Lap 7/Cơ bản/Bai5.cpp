@@ -13,26 +13,27 @@ int main()
 
 int Nhap_So(int n)
 {
-    printf("Nhap so nguyen duong n: ");
+    printf("Nhap n: ");
     scanf("%d", &n);
-
     return n;
 }
 
-bool Check_Element_Number(int n)
+int Check_Element_Number(int n)
 {
+    int flag = 0;
     if (n < 2)
     {
-        return 0;
+        return flag;
     }
-    for (int i = 2; i < n; i += 2)
+    for (int i = 2; i < n; i++)
     {
         if (n % i == 0)
         {
-            return 0;
+            return flag;
         }
     }
-    return 1;
+    flag++;
+    return flag;
 }
 
 void Element_Number(int n)

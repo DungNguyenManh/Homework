@@ -38,10 +38,12 @@ bool Check_Element_Number(int n)
 
 void Element_Number(int n)
 {
-    int count = n+1;
-    while(true){
-        if(Check_Element_Number(count)){
-            printf("So nguyen to lon hon va gan %d nhat la: %d",n,count);
+    int count = n + 1;
+    while (true)
+    {
+        if (Check_Element_Number(count))
+        {
+            printf("So nguyen to lon hon va gan %d nhat la: %d", n, count);
             break;
         }
         count++;

@@ -29,7 +29,6 @@ void So_Doi_Xung(long n)
     long sum = 0;
     while(temp > 0){
         sum = sum * 10 + (temp % 10);
-
         temp/=10;
     }
     if(sum == n){
