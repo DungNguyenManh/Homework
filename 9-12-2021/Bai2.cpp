@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 #define Max 100
 
 void Nhap_mang(int a[], int n)
