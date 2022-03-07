@@ -75,6 +75,36 @@ bool Check_So_Doi_Xung(int n)
     return 0;
 }
 
+bool Check_So_Chinh_Phuong(int n)
+{
+    if (sqrt(n) * sqrt(n) == n)
+    {
+        return 1;
+    }
+    return 0;
+}
+
+bool Check_So_Hoan_Thien(int n)
+{
+    int sum = 0;
+    if (n == 0)
+    {
+        return 0;
+    }
+    for (int i = 1; i < n; i++)
+    {
+        if (n % i == 0)
+        {
+            sum += i;
+        }
+    }
+    if (sum == n)
+    {
+        return 1;
+    }
+    return 0;
+}
+
 void Xuat_Mang(int a[], int n)
 {
     printf("Cac phan tu trong mang la: ");
@@ -82,18 +112,34 @@ void Xuat_Mang(int a[], int n)
     {
         printf("%2d ", a[i]);
     }
-    printf("\nCac phan tu la so nguyen to trong mang la: ");
+    printf("\nCac phan tu co vi tri la so nguyen to: ");
     for (int i = 0; i < n; i++)
     {
-        if (Check_Element_Number(a[i]))
+        if (Check_Element_Number(i))
         {
             printf("%2d ", a[i]);
         }
     }
-    printf("\nCac phan tu la so doi xung trong mang la: ");
+    printf("\nCac phan tu co vi tri la so doi xung: ");
     for (int i = 0; i < n; i++)
     {
-        if (Check_So_Doi_Xung(a[i]))
+        if (Check_So_Doi_Xung(i))
+        {
+            printf("%2d ", a[i]);
+        }
+    }
+    printf("\nCac phan tu co vi tri la so chinh phuong: ");
+    for (int i = 0; i < n; i++)
+    {
+        if (Check_So_Chinh_Phuong(i))
+        {
+            printf("%2d ", a[i]);
+        }
+    }
+    printf("\nCac phan tu co vi tri la so hoan thien: ");
+    for (int i = 0; i < n; i++)
+    {
+        if (Check_So_Hoan_Thien(i))
         {
             printf("%2d ", a[i]);
         }

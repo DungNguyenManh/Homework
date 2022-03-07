@@ -44,29 +44,19 @@ void Nhap_Mang(int a[], int n)
     }
 }
 
-bool Check_Element_Number(int n)
+bool Check_So_Hoan_Thien(int n)
 {
-    if (n < 2)
+    int sum = 0;
+    if (n == 0)
     {
         return 0;
     }
-    for (int i = 2; i <= sqrt(n); i += 2)
+    for (int i = 1; i < n; i++)
     {
         if (n % i == 0)
         {
-            return 0;
+            sum += i;
         }
-    }
-    return 1;
-}
-
-bool Check_So_Doi_Xung(int n)
-{
-    int temp = n, sum = 0;
-    while (temp > 0)
-    {
-        sum = sum * 10 + (temp % 10);
-        temp /= 10;
     }
     if (sum == n)
     {
@@ -82,18 +72,26 @@ void Xuat_Mang(int a[], int n)
     {
         printf("%2d ", a[i]);
     }
-    printf("\nCac phan tu la so nguyen to trong mang la: ");
+    printf("\nCac phan tu tai vi tri le la: ");
     for (int i = 0; i < n; i++)
     {
-        if (Check_Element_Number(a[i]))
+        if (i % 2 != 0)
         {
             printf("%2d ", a[i]);
         }
     }
-    printf("\nCac phan tu la so doi xung trong mang la: ");
+    printf("\nCac phan tu tai vi tri chan la: ");
     for (int i = 0; i < n; i++)
     {
-        if (Check_So_Doi_Xung(a[i]))
+        if (i % 2 == 0)
+        {
+            printf("%2d ", a[i]);
+        }
+    }
+    printf("\nCac phan tu tai vi tri so hoan thien la: ");
+    for (int i = 0; i < n; i++)
+    {
+        if (Check_So_Hoan_Thien(i))
         {
             printf("%2d ", a[i]);
         }

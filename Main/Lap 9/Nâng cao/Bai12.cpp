@@ -8,14 +8,16 @@
 
 int Nhap_Kich_Thuoc_Mang();
 void Nhap_Mang(int a[], int n);
-void Xuat_Mang(int a[], int n);
+void Xuat_Mang(int a[], int n, int x, int y);
+void Nhap_X_Y(int &x, int &y);
 
 int main()
 {
-    int a[Max], n = Nhap_Kich_Thuoc_Mang();
+    int a[Max], n = Nhap_Kich_Thuoc_Mang(), x, y;
     srand((int)time(NULL));
+    Nhap_X_Y(x, y);
     Nhap_Mang(a, n);
-    Xuat_Mang(a, n);
+    Xuat_Mang(a, n, x, y);
 
     return 0;
 }
@@ -44,56 +46,40 @@ void Nhap_Mang(int a[], int n)
     }
 }
 
-bool Check_Element_Number(int n)
+void Nhap_X_Y(int &x, int &y)
 {
-    if (n < 2)
+    do
     {
-        return 0;
-    }
-    for (int i = 2; i <= sqrt(n); i += 2)
-    {
-        if (n % i == 0)
+        printf("Nhap x: ");
+        scanf("%d", &x);
+        printf("Nhap y: ");
+        scanf("%d", &y);
+        if (!(x < y))
         {
-            return 0;
+            printf("Khong hop le. Nhap x < y !\n");
         }
-    }
-    return 1;
+    } while (!(x < y));
 }
 
-bool Check_So_Doi_Xung(int n)
-{
-    int temp = n, sum = 0;
-    while (temp > 0)
-    {
-        sum = sum * 10 + (temp % 10);
-        temp /= 10;
-    }
-    if (sum == n)
-    {
-        return 1;
-    }
-    return 0;
-}
-
-void Xuat_Mang(int a[], int n)
+void Xuat_Mang(int a[], int n, int x, int y)
 {
     printf("Cac phan tu trong mang la: ");
     for (int i = 0; i < n; i++)
     {
         printf("%2d ", a[i]);
     }
-    printf("\nCac phan tu la so nguyen to trong mang la: ");
+    printf("\nCac phan tu trong [%d,%d] la: ", x, y);
     for (int i = 0; i < n; i++)
     {
-        if (Check_Element_Number(a[i]))
+        if (x < a[i] && a[i] < y)
         {
             printf("%2d ", a[i]);
         }
     }
-    printf("\nCac phan tu la so doi xung trong mang la: ");
+    printf("\nCac phan tu chan trong [%d,%d] la: ", x, y);
     for (int i = 0; i < n; i++)
     {
-        if (Check_So_Doi_Xung(a[i]))
+        if (x < a[i] && a[i] < y && a[i] % 2 == 0)
         {
             printf("%2d ", a[i]);
         }

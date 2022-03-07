@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 #define Max 100
-#define Min -100
+#define Min 0
 
 int Nhap_Kich_Thuoc_Mang();
 void Nhap_Mang(int a[], int n);
@@ -44,37 +44,6 @@ void Nhap_Mang(int a[], int n)
     }
 }
 
-bool Check_Element_Number(int n)
-{
-    if (n < 2)
-    {
-        return 0;
-    }
-    for (int i = 2; i <= sqrt(n); i += 2)
-    {
-        if (n % i == 0)
-        {
-            return 0;
-        }
-    }
-    return 1;
-}
-
-bool Check_So_Doi_Xung(int n)
-{
-    int temp = n, sum = 0;
-    while (temp > 0)
-    {
-        sum = sum * 10 + (temp % 10);
-        temp /= 10;
-    }
-    if (sum == n)
-    {
-        return 1;
-    }
-    return 0;
-}
-
 void Xuat_Mang(int a[], int n)
 {
     printf("Cac phan tu trong mang la: ");
@@ -82,18 +51,10 @@ void Xuat_Mang(int a[], int n)
     {
         printf("%2d ", a[i]);
     }
-    printf("\nCac phan tu la so nguyen to trong mang la: ");
+    printf("\nCac phan tu theo yeu cau la: ");
     for (int i = 0; i < n; i++)
     {
-        if (Check_Element_Number(a[i]))
-        {
-            printf("%2d ", a[i]);
-        }
-    }
-    printf("\nCac phan tu la so doi xung trong mang la: ");
-    for (int i = 0; i < n; i++)
-    {
-        if (Check_So_Doi_Xung(a[i]))
+        if ((a[i] >= a[i+1]) && (i < (i + 1)))
         {
             printf("%2d ", a[i]);
         }

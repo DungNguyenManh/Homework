@@ -60,21 +60,6 @@ bool Check_Element_Number(int n)
     return 1;
 }
 
-bool Check_So_Doi_Xung(int n)
-{
-    int temp = n, sum = 0;
-    while (temp > 0)
-    {
-        sum = sum * 10 + (temp % 10);
-        temp /= 10;
-    }
-    if (sum == n)
-    {
-        return 1;
-    }
-    return 0;
-}
-
 void Xuat_Mang(int a[], int n)
 {
     printf("Cac phan tu trong mang la: ");
@@ -82,18 +67,10 @@ void Xuat_Mang(int a[], int n)
     {
         printf("%2d ", a[i]);
     }
-    printf("\nCac phan tu la so nguyen to trong mang la: ");
+    printf("\nCac phan tu la so nguyen to va o vi tri chan la: ");
     for (int i = 0; i < n; i++)
     {
-        if (Check_Element_Number(a[i]))
-        {
-            printf("%2d ", a[i]);
-        }
-    }
-    printf("\nCac phan tu la so doi xung trong mang la: ");
-    for (int i = 0; i < n; i++)
-    {
-        if (Check_So_Doi_Xung(a[i]))
+        if (Check_Element_Number(a[i]) && i % 2 == 0)
         {
             printf("%2d ", a[i]);
         }
