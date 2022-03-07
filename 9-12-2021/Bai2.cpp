@@ -6,7 +6,7 @@ void Nhap_mang(int a[], int n)
     for (int i = 0; i < n; i++)
     {
         printf("Nhap vao phan tu thu %d: ", i + 1);
-        scanf("%d", &a[i]);
+        scanf("%d", &a[i]); 
     }
 }
 
