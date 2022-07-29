@@ -9,7 +9,7 @@ int main()
     trituyetdoi = abs(n);
     canbac2 = sqrt(n);
     printf("Tri tuyet doi cua %d la: %d", n, trituyetdoi);
-    printf("\nCan bac  cua %d la: %d", n, canbac2);
+    printf("\nCan bac  cua %d la: %d", n, canbac2); 
 
     return 0;
 }
