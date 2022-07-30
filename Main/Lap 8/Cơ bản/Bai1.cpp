@@ -18,7 +18,7 @@ void Menu()
     printf("4.-Ket thuc chuong trinh\n");
     printf("          Ban chon (1-4):");
 }
-
+ 
 void Chuongtrinh()
 {
     bool chon = true;
